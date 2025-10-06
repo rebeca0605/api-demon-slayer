@@ -18,6 +18,9 @@ body {
     justify-content: center;
 }
 
+
+
+/* HEADER */
 header {
     background-color: var(--primeira-cor);
     height: 130px;
@@ -73,6 +76,9 @@ input::placeholder {
     text-decoration: underline;
 }
 
+
+
+/* MAIN */
 .container-main{
     height: 1045px;
 }
@@ -248,6 +254,9 @@ input::placeholder {
     font-weight: normal;
 }
 
+
+
+/* FOOTER */
 footer{
     height: 169px;
 }
@@ -284,10 +293,4 @@ footer{
     color: white;
     justify-content: center;
     align-items: center;
-}
-
-.sla{
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
 }
