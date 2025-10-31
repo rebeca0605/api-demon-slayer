@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./pagina2.css">
+    <script src="./app.js" defer type="module"></script>
     <title>API Demon Slayer</title>
 </head>
 
@@ -29,8 +30,18 @@
         </div>
     </header>
     <main>
-        <div class="container-main">
-            <h1>PERSONAGENS</h1>
+        <div class="charactersGallery">
+            <div class="characters">
+                <h1>PERSONAGENS</h1>
+            </div>
+            <div class="cards" id="charactersGallery"></div>
+            <div class="proxima-pagina">
+                <div class="botao" id="prox-pagina">
+                    <img id="prevPage" src="./img/seta-esquerda.png" alt="">
+                    1 2 3 4...9
+                    <img id="nextPage" src="./img/seta-direita.png" alt="">
+                </div>
+            </div>
         </div>
     </main>
     <footer>

@@ -78,13 +78,13 @@ input::placeholder {
 
 
 /* MAIN */
-.container-main{
+.charactersGallery{
     height: 725px;
     background-color: white;
     background-image: url('./img/background-image-main.png');
 }
 
-.container-main h1{
+.characters h1{
     color: var(--quarta-cor);
     font-size: 40px;
     padding-top: 30px;
@@ -95,7 +95,66 @@ input::placeholder {
     font-weight: bold;
 }
 
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 10px;
+}
 
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 518px;
+    border-radius: 10px;
+    border: 3px solid var(--quarta-cor);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.card img {
+    width: 290px;
+    height: 460px;
+}
+
+.card p {
+    font-weight: bold;
+    font-family: "Lexend", sans-serif;
+    font-size: 23px;
+    color: var(--quarta-cor);
+}
+
+.proxima-pagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.botao{
+    width: 248px;
+    height: 45px;
+    background-color: var(--primeira-cor);
+    border-radius: 30px;
+    color: white;
+    font-size: 30px;
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.botao img {
+    width: 25px;
+}
 
 /* FOOTER */
 footer{
