@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./pagina3.css">
-    <script src="./app.js" defer type="module"></script>
+    <script src="./detalhes.js" defer type="module"></script>
     <title>API Demon Slayer</title>
 </head>
 
@@ -29,9 +29,28 @@
             </div>
         </div>
     </header>
+
     <main>
-        
+        <div class="characterInfos">
+            <div id="detalhes-container" class="characterDetails">
+                <img id="imagem" alt="">
+                <p id="quote"></p>
+                <h2 id="nome"></h2>
+
+                <div class="info">
+                    <p>Idade:<span id="idade"></span></p>
+                    <p>Gênero:<span id="genero"></span></p>
+                    <p>Raça:<span id="raca"></span></p>
+                </div>
+
+                <div class="descricao">
+                    <h3>Descrição</h3>
+                    <p id="descricao"></p>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
         <div class="all-footer">
             <div class="footer">

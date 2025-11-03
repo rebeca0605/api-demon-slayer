@@ -78,6 +78,12 @@ input::placeholder {
 
 
 /* MAIN */
+.characterInfos{
+    height: 981px;
+    background-color: white;
+    background-image: url('./img/background-character.png');
+}
+
 
 
 /* FOOTER */

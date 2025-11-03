@@ -51,6 +51,11 @@ async function exibirPersonagens() {
         const nome = document.createElement('p')
         nome.textContent = character.name
 
+        card.addEventListener('click', () => {
+
+            window.location.href = `pagina3.html?id=${character.id}`;
+        });
+
         card.appendChild(capa)
         card.appendChild(nome)
         galeriaDePersonagens.appendChild(card)
@@ -103,16 +108,16 @@ async function exibirEstilos() {
 
     const stylesPages = styles.slice(0, elementsOnPages)
 
-    stylesPages.forEach(character => {
+    stylesPages.forEach(style => {
         const card = document.createElement('div')
         card.className = 'card'
 
         const capa = document.createElement('img')
-        capa.src = character.img
-        capa.alt = character.name
+        capa.src = style.img
+        capa.alt = style.name
 
         const nome = document.createElement('p')
-        nome.textContent = character.name
+        nome.textContent = style.name
 
         card.appendChild(capa)
         card.appendChild(nome)

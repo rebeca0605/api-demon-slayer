@@ -294,3 +294,65 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+/*
+//resposividade para tablet
+@media (max-width:1024px) {
+    header {
+        background-color: var(--primeira-cor);
+        width: 1024px;
+        height: 130px;
+    }
+
+    .container-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1024px;
+        gap: 30px;
+    }
+
+    .input {
+        background-image: url('./img/Vector.png');
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        background-size: 20px;
+        border: 1px solid var(--borda-color);
+        padding-left: 10px;
+        width: 500px;
+        height: 31px;
+        background-color: var(--segunda-cor);
+        font-size: 15px;
+        font-family: "Lexend", sans-serif;
+        color: var(--terceira-cor);
+        border-radius: 30px;
+    }
+
+    input::placeholder {
+        color: var(--terceira-cor);
+        opacity: 1;
+    }
+
+    .icons {
+        display: flex;
+        gap: 30px;
+        height: 25px;
+    }
+
+    .login {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .destacado {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .destacado2 {
+        color: white;
+        text-decoration: underline;
+    } 
+}
+*/
