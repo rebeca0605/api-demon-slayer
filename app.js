@@ -1,16 +1,19 @@
 'use strict'
 
-window.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('personagens').addEventListener('click', function () {
-        window.location.href = './pagina2.html'
-    })
-})
+const personagensCard = document.getElementById('personagens');
+const estilosCard = document.getElementById('estilos');
 
-window.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('estilos').addEventListener('click', function () {
-        window.location.href = './pagina4.html'
-    })
-})
+if (personagensCard) {
+    personagensCard.addEventListener('click', function () {
+        window.location.href = './pagina2.html';
+    });
+}
+
+if (estilosCard) {
+    estilosCard.addEventListener('click', function () {
+        window.location.href = './pagina4.html';
+    });
+}
 
 const galeriaDePersonagens = document.getElementById('charactersGallery')
 let currentPage = 1
@@ -52,8 +55,11 @@ async function exibirPersonagens() {
         nome.textContent = character.name
 
         card.addEventListener('click', () => {
-
-            window.location.href = `pagina3.html?id=${character.id}`;
+            // A API espera um 'slug' (nome em minúsculas com espaços trocados por hífens).
+            // Ex: "Tanjiro Kamado" -> "tanjiro-kamado"
+            const characterSlug = character.name.toLowerCase().replace(/ /g, '-');
+            
+            window.location.href = `pagina3.html?id=${characterSlug}`;
         });
 
         card.appendChild(capa)
@@ -61,24 +67,6 @@ async function exibirPersonagens() {
         galeriaDePersonagens.appendChild(card)
     })
 }
-
-document.getElementById('prevPage').addEventListener('click', () => {
-    if (currentPage > 1) {
-        currentPage--
-        exibirPersonagens()
-    } else {
-        alert('Você já está na primeira página!')
-    }
-})
-
-document.getElementById('nextPage').addEventListener('click', () => {
-    if (currentPage < totalPages) {
-        currentPage++
-        exibirPersonagens()
-    } else {
-        alert('Você já está na última página!')
-    }
-})
 
 const galeriaDeEstilos = document.getElementById('stylesGallery')
 let pageCurrent = 1
@@ -125,23 +113,36 @@ async function exibirEstilos() {
     })
 }
 
-document.getElementById('prevPage').addEventListener('click', () => {
-    if (pageCurrent > 1) {
-        pageCurrent--
-        exibirEstilos()
-    } else {
-        alert('Você já está na primeira página!')
-    }
-})
+// --- LÓGICA PARA A PÁGINA DE PERSONAGENS (pagina2.html) ---
+if (galeriaDePersonagens) {
+    document.getElementById('prevPage').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            exibirPersonagens();
+        } else {
+            alert('Você já está na primeira página!');
+        }
+    });
 
-document.getElementById('nextPage').addEventListener('click', () => {
-    if (pageCurrent < totalPages) {
-        pageCurrent++
-        exibirEstilos()
-    } else {
-        alert('Você já está na última página!')
-    }
-})
+    document.getElementById('nextPage').addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            exibirPersonagens();
+        } else {
+            alert('Você já está na última página!');
+        }
+    });
 
-exibirPersonagens()
-exibirEstilos()
+    // Chama a função para exibir os personagens ao carregar a página 2
+    exibirPersonagens();
+}
+
+// --- LÓGICA PARA A PÁGINA DE ESTILOS (pagina4.html) ---
+if (galeriaDeEstilos) {
+    // OBS: A paginação aqui está usando os mesmos botões da galeria de personagens.
+    // O ideal seria ter botões com IDs diferentes para cada galeria ou refatorar o código.
+    // Por enquanto, esta lógica não será executada na pagina2.html, evitando conflitos.
+
+    // Chama a função para exibir os estilos ao carregar a página 4
+    exibirEstilos();
+}

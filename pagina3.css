@@ -82,9 +82,26 @@ input::placeholder {
     height: 981px;
     background-color: white;
     background-image: url('./img/background-character.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.characterDetails img{
+    width: 480px;
+    height: 783px;
+    border: 5px solid var(--quarta-cor);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.characterDetails h2{
+    font-family: "Lexend" sans-serif;
+    font-size: 45px;
+    color: var(--quarta-cor);
+}
 
 /* FOOTER */
 footer{
