@@ -87,7 +87,13 @@ input::placeholder {
     justify-content: center;
 }
 
-.characterDetails img{
+.characterDetails{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.details1 img{
     width: 480px;
     height: 783px;
     border: 5px solid var(--quarta-cor);
@@ -97,10 +103,109 @@ input::placeholder {
     justify-content: center;
 }
 
-.characterDetails h2{
-    font-family: "Lexend" sans-serif;
-    font-size: 45px;
+.quote{
+    width: 480px;
+}
+
+.details1 p {
+    font-family: "Inter" sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
     color: var(--quarta-cor);
+}
+
+.characterDetails h1{
+    font-family: "Lexend" sans-serif;
+    font-size: 50px;
+    color: var(--quarta-cor);
+}
+
+.container-details{
+    width: 635px;
+    height: 710px;
+    background-color: white;
+    border: 5px solid var(--quarta-cor);
+    border-radius: 10px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.idade{
+    width: 455px;
+    height: 33px;
+    background-color: var(--segunda-cor);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.genero{
+    width: 455px;
+    height: 33px;
+    background-color: var(--segunda-cor);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.raca{
+    width: 455px;
+    height: 33px;
+    background-color: var(--segunda-cor);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.descricao{
+    width: 455px;
+    height: 33px;
+    background-color: var(--segunda-cor);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.container-details h3{
+    font-family: "Lexend" sans-serif;
+    font-size: 18px;
+    color: var(--quarta-cor);
+    font-weight: normal;
+}
+
+.description{
+    width: 447px;
 }
 
 /* FOOTER */

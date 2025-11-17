@@ -39,7 +39,7 @@ async function buscarPersonagens(pagina = 1) {
 async function exibirPersonagens() {
     const characters = await buscarPersonagens(currentPage)
 
-    galeriaDePersonagens.innerHTML = '' 
+    galeriaDePersonagens.innerHTML = ''
 
     const charactersPage = characters.slice(0, elementsOnPage)
 
@@ -55,12 +55,11 @@ async function exibirPersonagens() {
         nome.textContent = character.name
 
         card.addEventListener('click', () => {
-            // A API espera um 'slug' (nome em minúsculas com espaços trocados por hífens).
-            // Ex: "Tanjiro Kamado" -> "tanjiro-kamado"
-            const characterSlug = character.name.toLowerCase().replace(/ /g, '-');
-            
-            window.location.href = `pagina3.html?id=${characterSlug}`;
+            localStorage.setItem("personagemSelecionado", JSON.stringify(character));
+
+            window.location.href = "pagina3.html";
         });
+
 
         card.appendChild(capa)
         card.appendChild(nome)
@@ -92,7 +91,7 @@ async function buscarEstilos(pagina = 1) {
 async function exibirEstilos() {
     const styles = await buscarEstilos(pageCurrent)
 
-    galeriaDeEstilos.innerHTML = '' 
+    galeriaDeEstilos.innerHTML = ''
 
     const stylesPages = styles.slice(0, elementsOnPages)
 
@@ -113,7 +112,7 @@ async function exibirEstilos() {
     })
 }
 
-// --- LÓGICA PARA A PÁGINA DE PERSONAGENS (pagina2.html) ---
+
 if (galeriaDePersonagens) {
     document.getElementById('prevPage').addEventListener('click', () => {
         if (currentPage > 1) {
@@ -133,16 +132,10 @@ if (galeriaDePersonagens) {
         }
     });
 
-    // Chama a função para exibir os personagens ao carregar a página 2
     exibirPersonagens();
 }
 
-// --- LÓGICA PARA A PÁGINA DE ESTILOS (pagina4.html) ---
 if (galeriaDeEstilos) {
-    // OBS: A paginação aqui está usando os mesmos botões da galeria de personagens.
-    // O ideal seria ter botões com IDs diferentes para cada galeria ou refatorar o código.
-    // Por enquanto, esta lógica não será executada na pagina2.html, evitando conflitos.
 
-    // Chama a função para exibir os estilos ao carregar a página 4
     exibirEstilos();
 }

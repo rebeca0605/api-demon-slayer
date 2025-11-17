@@ -7,6 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./pagina3.css">
     <script src="./detalhes.js" defer></script>
     <title>API Demon Slayer</title>
@@ -33,19 +38,34 @@
     <main>
         <div class="characterInfos">
             <div id="detalhes-container" class="characterDetails">
-                <img id="imagem" alt="">
-                <p id="quote"></p>
-                <h2 id="nome"></h2>
-
-                <div class="info">
-                    <p>Idade:<span id="idade"></span></p>
-                    <p>Gênero:<span id="genero"></span></p>
-                    <p>Raça:<span id="raca"></span></p>
+                <div class="details1">
+                    <img id="imagem" src="" alt="">
+                    <div class="quote">
+                        <p id="quote"></p>
+                    </div>
                 </div>
 
-                <div class="descricao">
-                    <h3>Descrição</h3>
-                    <p id="descricao"></p>
+                <div class="container2">
+
+                    <h1 id="nome"></h1>
+
+                    <div class="container-details">
+                        <div class="informacoes">
+                            <div class="idade"> IDADE:</div>
+                            <h3 id="idade"></h3>
+
+                            <div class="genero"> GÊNERO: </div>
+                            <h3 id="genero"></h3>
+
+                            <div class="raca"> RAÇA: </div>
+                            <h3 id="raca"></h3>
+
+                            <div class="descricao"> DESCRIÇÃO: </div>
+                            <div class="description">
+                                <h3 id="descricao"></h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,6 +90,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="copyright">
                 © 2025 API Demon Slayer | Desenvolvido por Rebeca Gomes
             </div>
