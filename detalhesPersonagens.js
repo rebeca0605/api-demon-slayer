@@ -1,7 +1,7 @@
 'use strict'
 
 // pegar personagem do localStorage
-const personagem = JSON.parse(localStorage.getItem("personagemSelecionado"));
+const personagem = JSON.parse(localStorage.getItem("personagemSelecionado"))
 
 if (personagem) {
     mostrarDetalhes(personagem);

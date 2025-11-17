@@ -95,7 +95,7 @@ async function exibirEstilos() {
 
     const stylesPages = styles.slice(0, elementsOnPages)
 
-    stylesPages.forEach(style => {
+    stylesPages.forEach(style => {  
         const card = document.createElement('div')
         card.className = 'card'
 
@@ -105,6 +105,12 @@ async function exibirEstilos() {
 
         const nome = document.createElement('p')
         nome.textContent = style.name
+
+        card.addEventListener('click', () => {
+            localStorage.setItem("estiloSelecionado", JSON.stringify(style));
+
+            window.location.href = "pagina5.html";
+        });
 
         card.appendChild(capa)
         card.appendChild(nome)
