@@ -17,7 +17,9 @@ body {
     justify-content: center;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 /* HEADER */
 header {
@@ -196,6 +198,17 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+}
+
+.redes-sociais a {
+
+    color: white;
+}
+
 
 
 /* reseponsividade para tablet */
@@ -378,4 +391,15 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
+    .redes-sociais {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .redes-sociais a {
+
+        color: white;
+    }
+
 }
