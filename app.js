@@ -67,6 +67,30 @@ async function exibirPersonagens() {
     })
 }
 
+
+if (galeriaDePersonagens) {
+    document.getElementById('prevPage').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            exibirPersonagens();
+        } else {
+            alert('Você já está na primeira página!');
+        }
+    });
+
+    document.getElementById('nextPage').addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            exibirPersonagens();
+        } else {
+            alert('Você já está na última página!');
+        }
+    });
+
+    exibirPersonagens();
+}
+
+
 const galeriaDeEstilos = document.getElementById('stylesGallery')
 let pageCurrent = 1
 const pagesTotal = 9
