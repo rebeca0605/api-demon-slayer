@@ -119,26 +119,26 @@ async function exibirEstilos() {
 }
 
 
-if (galeriaDePersonagens) {
-    document.getElementById('prevPage').addEventListener('click', () => {
-        if (currentPage > 1) {
-            currentPage--;
-            exibirPersonagens();
+if (galeriaDeEstilos) {
+    document.getElementById('pagePrev').addEventListener('click', () => {
+        if (pageCurrent > 1) {
+            pageCurrent--;
+            exibirEstilos();
         } else {
             alert('Você já está na primeira página!');
         }
     });
 
-    document.getElementById('nextPage').addEventListener('click', () => {
-        if (currentPage < totalPages) {
-            currentPage++;
-            exibirPersonagens();
+    document.getElementById('pageNext').addEventListener('click', () => {
+        if (pageCurrent < pagesTotal) {
+            pageCurrent++;
+            exibirEstilos();
         } else {
             alert('Você já está na última página!');
         }
     });
 
-    exibirPersonagens();
+    exibirEstilos();
 }
 
 if (galeriaDeEstilos) {
